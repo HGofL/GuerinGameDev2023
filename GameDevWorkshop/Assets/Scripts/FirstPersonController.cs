@@ -12,7 +12,7 @@ public class FirstPersonController : MonoBehaviour
 {
 
     //Player Variables
-    public float speed = 2f;
+    public float speed = 2f; //This is snail pace
     public float gravity = -10f;
     public float jumpForce = 2f;
 
@@ -68,13 +68,17 @@ public class FirstPersonController : MonoBehaviour
 
     public void Look()
     {
-        float xAmount = mouseMovement.x * sensitivity * Time.deltaTime;
-        float yAmount = mouseMovement.y * sensitivity * Time.deltaTime;
+        float xAmount = mouseMovement.y * sensitivity * Time.deltaTime;
+        float yAmount = mouseMovement.x * sensitivity * Time.deltaTime;
 
-        transform.Rotate(Vector3.up * mouseMovement * sensitivity * Time.deltaTime);
+        transform.Rotate(Vector3.up * mouseMovement.x * sensitivity * Time.deltaTime);
 
-            camXRotation -= xAmount;
-            camXRotation = Mathf.Clamp(camXRotation, -90f, 90f);
+        camXRotation -= xAmount;
+        camXRotation = Mathf.Clamp(camXRotation, -90f, 90f);
+
+        //Sets camera's local rotation. Player will be able to look up and down. Might have to play with these settings.
+
+        cameraLive.transform.localRotation = Quaternion.Euler(camXRotation, 0, 0);
     }
 
     public void OnMove(InputAction.CallbackContext context)
