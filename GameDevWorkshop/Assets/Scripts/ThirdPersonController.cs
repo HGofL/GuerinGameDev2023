@@ -63,7 +63,7 @@ public class ThirdPersonController : MonoBehaviour
     public void GetJumpInput(InputAction.CallbackContext context)
     {
         //When button or key is pressed, execute
-        if (context.phase == InputActionPhase.Started)
+        if(context.phase == InputActionPhase.Started)
         {
             Jump();
         }
@@ -75,7 +75,7 @@ public class ThirdPersonController : MonoBehaviour
     {
         //What direction to face
 
-        var cam_position = new Vector3(camera.position.x, player.position.y, camera.position.z);
+        var cam_position = new Vector3(camera.position.x, camera.position.y, camera.position.z); 
         Vector3 view_direction = player.position - cam_position;
 
         orientation.forward = view_direction;
@@ -86,7 +86,7 @@ public class ThirdPersonController : MonoBehaviour
 
         //Keyboard input
 
-        if (move_input != Vector2.zero)
+        if(move_input != Vector2.zero)
         {
             //Creates a new rotation that we want to player_model to look at
             Quaternion new_rotation = Quaternion.LookRotation(direction, Vector3.up);
