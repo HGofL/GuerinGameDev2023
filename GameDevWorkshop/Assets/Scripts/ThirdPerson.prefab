@@ -99,7 +99,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2793438474405746603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a953d5e1a704e94485b113c59c00a4d, type: 3}
+  m_Script: {fileID: 11500000, guid: c4e441f64fc4ab149bb768cddf3b53c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
@@ -108,7 +108,7 @@ MonoBehaviour:
   player_model: {fileID: 3413942083046710004}
   orientation: {fileID: 2823445033733626645}
   move_force: 30
-  rotation_speed: 10
+  rotation_speed: 7
   jump_force: 500
 --- !u!114 &3118998131081626720
 MonoBehaviour:
