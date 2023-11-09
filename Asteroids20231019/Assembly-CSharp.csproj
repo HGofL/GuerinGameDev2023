@@ -61,6 +61,7 @@
     <Compile Include="Assets\Bullet\Bullet.cs" />
     <Compile Include="Assets\Asteroids\Asteroid.cs" />
     <Compile Include="Assets\Player\ShipPlayerController.cs" />
+    <Compile Include="Assets\Asteroids\Spawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
